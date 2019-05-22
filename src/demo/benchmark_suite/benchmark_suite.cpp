@@ -77,7 +77,7 @@ public:
             return 
                     std::unique_ptr<Fitness<double>>(
                             new Fitness<double>(-1 * _problemInstance->compute(mvc.getContainer())));
-        } catch (std::bad_cast)
+        } catch (std::bad_cast&)
         {
             throw new std::runtime_error("Chromosome is not an Integer MultiValueChromosome with double fitness!");
         }
